@@ -1,4 +1,4 @@
-# Portfolio Project - ONE program, Alura + Oracle partnership
+# Portfolio Project 
 This repository contains a personal portfolio project developed using HTML and CSS as part of an Alura course.
 
 ## Features and Characteristics
