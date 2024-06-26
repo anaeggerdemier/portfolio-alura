@@ -1,0 +1,184 @@
+/* Variáveis de Cores */
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --primary-color: #6A49FA;
+    --secondary-color: #453284;
+    --accent-color: #C6E6FF;
+    --background-color: #FEDADA;
+    --text-color: #000000;
+}
+
+/* Reset de CSS Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Classes Reutilizáveis */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilo do Conteúdo Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.text-section {
+    text-align: center;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.emph-text {
+    color: var(--secondary-color);
+}
+
+.intro-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+.social-links a img {
+    filter: invert(1) sepia(1) saturate(1) hue-rotate(0deg);
+}
+
+.image-section {
+    text-align: center;
+}
+
+.image-container img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+
+.image-container img:hover {
+    transform: scale(1.1); 
+}
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    margin-top: auto; 
+}
+
+/* Exceções */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .text-section, .image-section {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin-bottom: 1rem;
+    }
+}
